@@ -1,6 +1,7 @@
 package net.junhabaek.aoporder.common.aop.order;
 
 import lombok.extern.slf4j.Slf4j;
+import net.junhabaek.aoporder.common.aop.exception.OrderConstants;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 @Slf4j
-@Order(value = -10)
+@Order(value = OrderConstants.HIGH_ORDER)
 public class HighPrecedenceAspect {
 
     @Pointcut("@annotation(net.junhabaek.aoporder.common.aop.order.HighPrecedenceAnnotation)")
