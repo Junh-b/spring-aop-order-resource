@@ -6,12 +6,10 @@ import org.springframework.core.Ordered;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@EnableTransactionManagement(order = Ordered.LOWEST_PRECEDENCE)
-//@EnableTransactionManagement(order = Ordered.HIGHEST_PRECEDENCE)
+//@EnableTransactionManagement(order = Ordered.LOWEST_PRECEDENCE)
+@EnableTransactionManagement(order = 0)
 public class AopOrderApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(AopOrderApplication.class, args);
     }
-
 }
